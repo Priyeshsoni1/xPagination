@@ -10,8 +10,10 @@ export const fetchTable = async () => {
     if (!Array.isArray(data)) {
       throw new Error("API response is not an array");
     }
-    return data || [];
+    return data;
   } catch (err) {
+    // alert("Error in Loading Data");
     console.log("Error in Data Fetching:", err);
+    return [];
   }
 };

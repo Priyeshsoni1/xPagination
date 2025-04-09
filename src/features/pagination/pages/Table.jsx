@@ -6,9 +6,15 @@ export const Table = () => {
   const [showData, setShowData] = useState([]);
   const [count, setCount] = useState(1);
   const fetchData = async () => {
-    const data = await fetchTable();
-    setTableData(data);
-    setShowData(data.slice(0, 10 * count));
+    try {
+      const data = await fetchTable();
+
+      setTableData(data);
+
+      setShowData(data.slice(0, 10 * count));
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   useEffect(() => {
