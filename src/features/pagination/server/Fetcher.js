@@ -12,7 +12,7 @@ export const fetchTable = async () => {
     }
     return data;
   } catch (err) {
-    // alert("Error in Loading Data");
+    alert("Error in Loading Data");
     console.log("Error in Data Fetching:", err);
     return [];
   }
