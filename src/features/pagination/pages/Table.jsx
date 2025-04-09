@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchTable } from "../server/fetcher";
+import { fetchTable } from "../server/Fetcher";
 
 export const Table = () => {
   const [tableData, setTableData] = useState([]);
